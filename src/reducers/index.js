@@ -2,5 +2,5 @@ import {combineReducers} from 'redux'
 import books from './bookReducers'
 
 export default combineReducers({
-    bookShell:books
+    books:books
 })

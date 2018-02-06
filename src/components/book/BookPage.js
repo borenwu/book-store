@@ -40,7 +40,7 @@ class Book extends React.Component{
 
 const mapStateToProps = (state,ownProps)=>{
     return {
-        books:state.bookShell
+        books:state.books
     }
 }
 
