@@ -9,7 +9,7 @@ import * as bookActions from './actions/bookAction';
 import configureStore from './store/configureStore'
 
 const store = configureStore()
-store.dispatch(bookActions.fetchBooks());
+// store.dispatch(bookActions.fetchBooks());
 
 render(
     <Provider store = {store}>

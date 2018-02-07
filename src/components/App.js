@@ -14,8 +14,9 @@ const App = (props) => {
                     <ul className="navbar-nav">
                         <li className="nav-item"><Link className="nav-link" to="/">Home</Link></li>
                         <li className="nav-item"><Link className="nav-link" to="/about">About</Link></li>
-                        <li className="nav-item"><Link className="nav-link" to="/books">Book</Link></li>
-                        <li className="nav-item"><Link className="nav-link" to="/cart">Cart</Link></li>
+                        {/*<li className="nav-item"><Link className="nav-link" to="/books">Book</Link></li>*/}
+                        {/*<li className="nav-item"><Link className="nav-link" to="/cart">Cart</Link></li>*/}
+                        <li className="nav-item"><Link className="nav-link" to="/company">Company</Link></li>
                     </ul>
                 </div>
             </nav>
