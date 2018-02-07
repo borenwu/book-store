@@ -1,8 +1,8 @@
 import * as actionTypes from './actionTypes'
 import Axios from 'axios'
 
-const clientUrl = 'http://192.168.0.117:1337/client'
-const clientsUrl = 'http://192.168.0.117:1337/clients'
+const clientUrl = 'http://192.168.1.104:1337/client'
+const clientsUrl = 'http://192.168.1.104:1337/clients'
 
 export const createClientSuccess = (client) => {
     return {
@@ -33,7 +33,7 @@ export const fetchClientsSuccess = (clients) => {
 
 export const fetchClients = (company) => {
     return (dispatch) => {
-        return Axios.post(apiUrl,company)
+        return Axios.post(clientsUrl,company)
             .then(response => {
                 dispatch(fetchClientsSuccess(response.data))
             })

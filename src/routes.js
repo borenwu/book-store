@@ -4,6 +4,7 @@ import Home from './components/common/HomePage'
 import About from './components/common/AboutPage'
 import Book from './components/book/BookPage'
 import Company from './components/company/CompanyPage'
+import Client from './components/client/ClientPage'
 import App from './components/App'
 
 export default (
@@ -12,5 +13,6 @@ export default (
         <Route path="/about" component={About}></Route>
         <Route path="/books" component={Book}></Route>
         <Route path="/company" component={Company}></Route>
+        <Route path="/client" component={Client}></Route>
     </Route>
 );

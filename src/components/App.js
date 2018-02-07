@@ -17,6 +17,7 @@ const App = (props) => {
                         {/*<li className="nav-item"><Link className="nav-link" to="/books">Book</Link></li>*/}
                         {/*<li className="nav-item"><Link className="nav-link" to="/cart">Cart</Link></li>*/}
                         <li className="nav-item"><Link className="nav-link" to="/company">Company</Link></li>
+                        <li className="nav-item"><Link className="nav-link" to="/client">Client</Link></li>
                     </ul>
                 </div>
             </nav>
