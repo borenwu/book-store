@@ -1,6 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux';
 import * as clientActions from '../../actions/clientAction';
+import { Link } from 'react-router';
 
 
 class ClientPage extends React.Component{
@@ -30,7 +31,7 @@ class ClientPage extends React.Component{
             <div>
                 <h3>Clients</h3>
                 <ul>
-                    {this.props.clients.map((c,i)=> <li key={i}>{c.client_name}</li>)}
+                    {this.props.clients.map((c,i)=> <Link to={`/client/${c.id}`}>{c.client_name}</Link>)}
                 </ul>
 
                 <div>
