@@ -1,16 +1,37 @@
 import React from 'react';
 
-const ClientDetails = ({client}) => {
-    console.log(client)
+class ClientDetails extends React.Component {
+    constructor(context, props) {
+        super(context, props)
+    }
 
-    return (
-        <div className="media">
-            <div className="media-body">
+    // componentDidMount() {
+    //     console.log(this.props.client)
+    // }
 
+    render() {
+        return (
+            <div className="media">
+                <div className="media-body">
+                    <li>{this.props.client.company.company_name}</li>
+                    <li>{this.props.client.client_name}</li>
+                    <li>{this.props.client.desc}</li>
+                </div>
             </div>
-        </div>
-    );
-};
+        )
+    }
+}
+// const ClientDetails = ({client}) => {
+//     console.log(client)
+//
+//     return (
+//         <div className="media">
+//             <div className="media-body">
+//
+//             </div>
+//         </div>
+//     );
+// };
 
 
 export default ClientDetails;

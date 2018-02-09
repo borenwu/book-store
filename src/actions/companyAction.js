@@ -3,7 +3,10 @@ import Axios from 'axios'
 
 // const apiUrl = 'http://192.168.1.104:1337/company'
 
-const apiUrl = 'http://192.168.0.117:1337/company'
+// const apiUrl = 'http://192.168.0.117:1337/company'
+
+const apiUrl = 'http://192.168.0.100:1337/company'
+
 
 export const createCompanySuccess = (company) => {
     return {

@@ -5,8 +5,11 @@ import qs from 'qs'
 // const clientUrl = 'http://192.168.1.104:1337/client'
 // const clientsUrl = 'http://192.168.1.104:1337/clients'
 
-const clientUrl = 'http://192.168.0.117:1337/client'
-const clientsUrl = 'http://192.168.0.117:1337/clients'
+// const clientUrl = 'http://192.168.0.117:1337/client'
+// const clientsUrl = 'http://192.168.0.117:1337/clients'
+
+const clientUrl = 'http://192.168.0.100:1337/client'
+const clientsUrl = 'http://192.168.0.100:1337/clients'
 
 
 // create client
@@ -39,7 +42,7 @@ export const fetchClientsSuccess = (clients) => {
 
 export const fetchClients = (company) => {
     return (dispatch) => {
-        console.log(company)
+        // console.log(company)
         return Axios.post(clientsUrl, company)
             .then(response => {
                 dispatch(fetchClientsSuccess(response.data))

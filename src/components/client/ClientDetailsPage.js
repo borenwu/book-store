@@ -1,5 +1,5 @@
 import React from 'react'
-import { connect } from 'react-redux';
+import {connect} from 'react-redux';
 import * as clientActions from '../../actions/clientAction';
 import ClientDetails from './ClientDetails'
 
@@ -7,11 +7,18 @@ import ClientDetails from './ClientDetails'
 class ClientDetailsPage extends React.Component {
     constructor(props) {
         super(props);
+        // this.props.fetchClientById(this.props.params.id);
     }
 
-    componentDidMount(){
+    componentWillMount() {
+        // console.log(this.props.params.id)
         this.props.fetchClientById(this.props.params.id);
+
     }
+
+    // componentDidUpdate(){
+    //     this.props.fetchClientById(this.props.params.id);
+    // }
 
     // addToCart(book){
     //     const item = {
@@ -22,11 +29,17 @@ class ClientDetailsPage extends React.Component {
     // }
 
     render() {
+        // console.log('client detail page props======>')
+        // console.log(this.props.client)
+
         return (
-            <div>
-                <h1>Client Details Page</h1>
-                <ClientDetails client={this.props.client} />
-            </div>
+            this.props.client.id == this.props.params.id ?
+                <div>
+                    <h1>Client Details Page</h1>
+                    <ClientDetails client={this.props.client}/>
+                </div>
+                : <div> Loading ... </div>
+
         );
     }
 }
