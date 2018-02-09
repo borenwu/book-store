@@ -14,7 +14,7 @@ export const clientsReducer = (state = [], action) => {
     }
 };
 
-export const clientReducer = (state = [], action) => {
+export const clientReducer = (state=[], action) => {
     switch (action.type) {
         case actionTypes.FETCH_CLIENT_BY_ID_SUCCESS:
             return action.client;

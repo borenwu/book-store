@@ -9,7 +9,7 @@ class ClientDetailsPage extends React.Component {
         super(props);
     }
 
-    componentDidMount(){
+    componentWillMount(){
         this.props.fetchClientById(this.props.params.id);
     }
 
@@ -39,7 +39,7 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch) => {
     return {
-        fetchClientById: client => dispatch(clientActions.fetchClientById(client)),
+        fetchClientById: clientId => dispatch(clientActions.fetchClientById(clientId)),
         // addToCart: item => dispatch(bookActions.addToCart(item))
     };
 };
