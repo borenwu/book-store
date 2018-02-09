@@ -11,7 +11,10 @@ class ClientPage extends React.Component{
     }
 
     componentDidMount(){
-        this.props.fetchClients();
+        let company = {
+            company_name:'博奥科技'
+        }
+        this.props.fetchClients(company);
     }
 
 
@@ -31,7 +34,7 @@ class ClientPage extends React.Component{
             <div>
                 <h3>Clients</h3>
                 <ul>
-                    {this.props.clients.map((c,i)=> <Link to={`/client/${c.id}`}>{c.client_name}</Link>)}
+                   {this.props.clients.map((c,i)=>  <li key={i}><Link  to={`/clients/${c.id}`}>View {c.client_name}</Link></li>)}
                 </ul>
 
                 <div>

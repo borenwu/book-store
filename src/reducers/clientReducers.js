@@ -1,6 +1,6 @@
 import * as actionTypes from '../actions/actionTypes'
 
-export const clientssReducer = (state = [], action) => {
+export const clientsReducer = (state = [], action) => {
     switch (action.type) {
         case actionTypes.CREATE_CLIENT_SUCCESS:
             return [
@@ -9,6 +9,17 @@ export const clientssReducer = (state = [], action) => {
             ];
         case actionTypes.FETCH_CLIENTS_SUCCESS:
             return action.clients;
+        default:
+            return state;
+    }
+};
+
+export const clientReducer = (state = [], action) => {
+    switch (action.type) {
+        case actionTypes.FETCH_CLIENT_BY_ID_SUCCESS:
+            return action.client;
+        case actionTypes.UPDATE_CLIENT_BY_ID_SUCCESS:
+            return action.client
         default:
             return state;
     }
