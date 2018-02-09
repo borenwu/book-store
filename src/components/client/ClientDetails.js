@@ -1,8 +1,7 @@
 import React from 'react';
 
 const ClientDetails = ({client}) => {
-    let json = JSON.stringify(client)
-    console.log(json['company'])
+    console.log(client)
 
     return (
         <div className="media">

@@ -9,7 +9,7 @@ class ClientDetailsPage extends React.Component {
         super(props);
     }
 
-    componentWillMount(){
+    componentDidMount(){
         this.props.fetchClientById(this.props.params.id);
     }
 
